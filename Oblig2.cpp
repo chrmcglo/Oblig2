@@ -21,6 +21,9 @@ void oppgave1() {
     }
 
 }
+// bruk av Template
+
+template<
 void oppgave2() {
     void* tall1 = 0;
     void* tall2 = 0;
@@ -48,7 +51,7 @@ std::optional<int> find_minimum(const std::vector<int>& data){
 int main()
 {
     int valg;
-    std::cout << "Hvilken oppgave?\n 1. Vectorer og Nullopt\n 2. Regner ut summen og pointers\n 3. Antall i en liste. \n Valg:";
+    std::cout << "Hvilken oppgave?\n 1. Vectorer og Nullopt-optional\n 2. Regner ut summen og pointers-Templates\n 3. Antall i en liste. \n Valg:";
     std::cin >> valg;
     switch (valg) {
     case 1:
