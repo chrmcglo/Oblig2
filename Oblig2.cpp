@@ -22,6 +22,11 @@ void oppgave1() {
 
 }
 void oppgave2() {
+    void* tall1 = 0;
+    void* tall2 = 0;
+    std::cout << "skriv inn to reele tall";
+    std::cin >> tall1 >> tall2;
+    std::cout << tall1;
 
 }
 void oppgave3() {
