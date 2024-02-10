@@ -6,14 +6,20 @@
 #include <span>
 #include <vector>
 //Decleration
-int find_minimun(std::span<int> data);
-
+std::optional<int> find_minimum(const std::vector<int>& data);
 
 // Oppgave 1. lag en vector med verdier, send vector til funksjon find_minimum, returner minste verdi hvis ingen nullopt. 
 void oppgave1() {
-    std::cout << " funksjon oppgave 1. OK";
-    std::vector<int> vec3{ 2,4,5,34,3 };
-    std::cout << find_minimun(vec3);
+    //std::cout << " funksjon oppgave 1. OK\n";
+    std::vector<int> vec3{};// kræsj hvis jeg prøver å sende vec3 inn i funksjon find_minumun uten verdier.
+    auto minVal = find_minimum(vec3);
+    if (minVal.has_value()) {
+        std::cout << "minste verdi i vector: " << minVal.value();
+    }
+    else {
+        std::cout << "Tom vector!\n";
+    }
+
 }
 void oppgave2() {
 
@@ -22,8 +28,10 @@ void oppgave3() {
 
 }
 
-int find_minimun(std::span<int> data) {
+std::optional<int> find_minimum(const std::vector<int>& data){
+    if (data.empty()) return std::nullopt;  // uten nullopt blir det kræsj!
     int minumun{ data[0] };
+    
     for (auto value : data) {
       if (minumun > value) {
             minumun = value;
