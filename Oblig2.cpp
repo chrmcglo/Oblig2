@@ -6,7 +6,7 @@
 #include <span>
 #include <vector>
 //Decleration
-double find_minimun;
+int find_minimun(std::span<int> data);
 
 
 // Oppgave 1. lag en vector med verdier, send vector til funksjon find_minimum, returner minste verdi hvis ingen nullopt. 
