@@ -7,6 +7,13 @@
 #include <vector>
 //Decleration
 std::optional<int> find_minimum(const std::vector<int>& data);
+// template 
+template <typename T>
+T utregning(const T x, const T y)
+{
+    return x + y;
+}
+
 
 // Oppgave 1. lag en vector med verdier, send vector til funksjon find_minimum, returner minste verdi hvis ingen nullopt. 
 void oppgave1() {
@@ -23,16 +30,22 @@ void oppgave1() {
 }
 // bruk av Template
 
-template<
-void oppgave2() {
-    void* tall1 = 0;
-    void* tall2 = 0;
-    std::cout << "skriv inn to reele tall";
-    std::cin >> tall1 >> tall2;
-    std::cout << tall1;
 
+void oppgave2() {
+    int a{};
+    int b{};
+    double d1{};
+    double d2{};
+    std::cout << "oppgi to heltall\n";
+    std::cin >> a >> b;
+    std::cout << "Oppgi to flyttall\n";
+    std::cin >> d1 >> d2;
+
+    std::cout << "heltall utregning: " << utregning(a, b) << std::endl;
+    std::cout << "flyttall utregning: " << utregning(d1, d2);
 }
 void oppgave3() {
+
 
 }
 
