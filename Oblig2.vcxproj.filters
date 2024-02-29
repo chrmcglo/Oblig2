@@ -18,5 +18,8 @@
     <ClCompile Include="Oblig2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Module.ixx">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
