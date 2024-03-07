@@ -24,8 +24,9 @@ export{
         return x + y;
     }
 
+    //Oppgave 3
     template <typename T>
-    auto count(const std::vector<T>& x) { // Kan ikke ha "T" hvis vi ikke returnere noe.
+    auto count(const std::vector<T>& x) { 
         int size = x.size();
         for (int i = 0; i < size - 1; i++) {
             auto value = x[i];
@@ -34,7 +35,7 @@ export{
             }
         }
     }
-    //Oppgave 3
+    // Template for int array
     template <typename T>
     T count(const T* x, size_t size) {
         for (size_t i = 0; i < size - 1; i++) {
